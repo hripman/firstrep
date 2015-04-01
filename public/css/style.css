@@ -1,0 +1,49 @@
+ 
+    input{
+    	
+    }
+    .login {
+   		width:450px;
+        height: 300px;
+        
+    	-moz-border-radius:4px;
+        box-shadow: 0 1px 5px rgba(4, 129, 177, 0.5);
+        padding:5px 10px;
+    }
+    input{
+        padding: 8px 6px;
+        margin-bottom: 40px;
+        display: block;
+        width: 200px;
+        height: 40px;
+        font-size: 20px;
+    }
+    input {
+        background:#f5fcfe;
+        text-indent: 0;
+        
+        color: #373737;
+        -webkit-transition-duration: 400ms;
+        -webkit-transition-property: width, background;
+        -webkit-transition-timing-function: ease;
+        -moz-transition-duration: 400ms;
+        -moz-transition-property: width, background;
+        -moz-transition-timing-function: ease;
+        -o-transition-duration: 400ms;
+        -o-transition-property: width, background;
+        -o-transition-timing-function: ease;
+        width: 380px;
+        
+        border-color:#ccc;
+        box-shadow:0 0 5px rgba(4, 129, 177, 0.5);
+        opacity:0.6;
+    }
+     legend, p {
+        color:#0481b1;
+        font-size:20px;
+        padding:0 4px;
+        background:#fff;
+        
+        font-weight:bold;
+    }
+    
