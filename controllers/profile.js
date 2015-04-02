@@ -22,11 +22,9 @@ controller.login = function (req,res){
 
 	profileModel.login(userData, function (err, data) {
 		if(err) {return res.send(err);}
-		userInf = data.first_name + " " +data.last_name;
-		res.send("ok");
+		res.send("OK");
 	});
 };
-	
+	module.exports = controller;
 
 
-module.exports = controller;
