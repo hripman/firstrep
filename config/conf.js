@@ -1,7 +1,7 @@
 var config = {
 	port: 3000,
 	mongo: "mongodb://localhost/user",
-	registration: "/registration"
+	registration: "/profile/register"
 };
 
 module.exports = config;
