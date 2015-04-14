@@ -15,18 +15,18 @@ var usersSchema = new Schema({	username   : String,
 				});
 					
 //joi validate
-usersSchema.methods.Validate = function(obj) {
-	var schema = {
+
+	var schema = Joi.object().keys({
 					username: Joi.string().min(6).max(30),
 					password: Joi.string().min(8).max(30),
 					first_name: Joi.string(),
 					last_name: Joi.string(),
 					
 					
-				};
-				return Joi.validate(obj, schema);
+				});
+				
 
-}
+
 
 //create mongoose object
 var user =  mongoose.model("Users",usersSchema);
@@ -42,18 +42,23 @@ model.prototype.register = function(userData, callback) {
 	 					 last_name  : userData.last_name }
 
 	 		
-	 var newUser = new user (insertedData);
-	 var err = newUser.Validate(insertedData);
-	 
-	 console.log(err);
-	 if(err)  throw err;
-					 
+	 var result = Joi.validate(insertedData, schema);
+		console.log(typeof(result));
+		if(result){
+			console.log("a");
+			console.log(result);
+			//throw result;
+		}	
+
+		
+			console.log("b");
 	 user.create(insertedData, function(err,data){
 	 		if(err) { console.log(error);
 	 			return callback(err, null);}
 		callback(null, data);
 
 	});	
+	
 		 
 
 	
