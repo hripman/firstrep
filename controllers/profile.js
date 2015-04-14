@@ -7,8 +7,10 @@ controller.register = function(req, res) {
 
 	var profileModel = new profileModelClass();
 	profileModel.register(userData, function (err, data) {
-		if(err) {return res.send(err);}
+		if(err) {
+			return res.send(err);}
 		res.send("ok");
+
 	});
 };
 
@@ -22,7 +24,9 @@ controller.login = function (req,res){
 
 	profileModel.login(userData, function (err, data) {
 		if(err) {return res.send(err);}
-		res.send("OK");
+		else {res.send("OK");
+	}
+
 	});
 };
 	module.exports = controller;
